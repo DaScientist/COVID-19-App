@@ -6,7 +6,8 @@
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
       "request": "launch",
-      "platform": "android"
+      "platform": "android",
+      "runArguments": ["--verbose"]
     }
   ]
 }
