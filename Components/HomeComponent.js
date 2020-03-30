@@ -1,12 +1,10 @@
 import React from 'react';
 import { View,Text } from 'react-native';
 
-function Home(){
+export default function Home(){
     return (
-        <View style={{ flex:1, alignItems:'center', justifyContent:'center'}}>
+        <View style={{ flex:1, alignItems:'center', justifyContent:'center' }}>
             <Text>Hello World, This is Home Screen</Text>
         </View>
     );
 }
-
-export default Home;
