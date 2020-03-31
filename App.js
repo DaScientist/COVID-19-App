@@ -20,7 +20,7 @@ import {
 
 // import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeComponent from './Components/HomeComponent.js';
+import HomeComponent from './Components/WHOGuidelines/HomeComponent.js';
 import SecondComponent from './Components/SecondComponent.js';
 
 const Drawer = createDrawerNavigator();
