@@ -1,27 +1,25 @@
 import React from 'react'
 import {View, Text, Linking} from 'react-native'
-import { Button,Card,Title,Paragraph } from "react-native-paper";
-export default function GuidelineComponent (props) {
+import { Button,Card,Title,Paragraph,Colors } from "react-native-paper";
+import { FlatList } from 'react-native-gesture-handler';
+
+export default function GuidelineComponent ({item}) {
     console.log('Rendering a component')
     return (
         <Card>
             <Card.Content>
-                <Title>{props.guideline.title}</Title>
-                <Paragraph>{props.guideline.content}</Paragraph>
+                {console.log({item})}
+                <Title>{item.title}</Title>
+                <Paragraph>{item.content}</Paragraph>
             </Card.Content>
             <Card.Actions>
-                <Renderlinks links={props.guideline.links}/>
+                <RenderLinks links={item.links}/>
             </Card.Actions>
         </Card>
     );
 }
 
 function RenderLinks(props) {
-    let buttons = null;
-    console.log('Generating buttons for a card.');
-    props.links.forEach(link => {
-        console.log('Making a button with link:'+JSON.stringify(link));
-        button += <Button onPress={()=>{Linking.openURL(link)}} link={link.link}>{link.title}</Button>
-    });
-    return buttons;
+    console.log(props.links)
+    return (<FlatList data={props.links} renderItem={({item})=> {console.log('The item link is:'+JSON.stringify(item));return <Button color={Colors.blue} onPress={()=>{Linking.openURL(item.link)}} title={item.title} />}}></FlatList>);
 }
