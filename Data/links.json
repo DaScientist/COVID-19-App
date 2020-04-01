@@ -1,8 +1,12 @@
 {
     "links":[
         {
-            "title":"Who_guidelines",
+            "title":"wash",
             "link":"https://dascientist.github.io/COVID-19-App-Data/WHO_guidelines/wash_guidelines.json"
+        },
+        {
+            "title":"institute",
+            "link":"https://dascientist.github.io/COVID-19-App-Data/WHO_guidelines/institution_guidelines.json"
         }
     ]
 }

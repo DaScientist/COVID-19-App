@@ -1,16 +1,23 @@
 import React from 'react'
-import {View, Text, Linking} from 'react-native'
-import { Button,Card,Title,Paragraph,Colors } from "react-native-paper";
+import {View, Text, Linking, StyleSheet} from 'react-native'
+import { DefaultTheme,Button,Card,Title,Paragraph,Colors } from "react-native-paper";
 import { FlatList } from 'react-native-gesture-handler';
 
-export default function GuidelineComponent ({item}) {
+export default function GuidelineComponent ({item,theme}) {
     console.log('Rendering a component')
     return (
-        <Card>
+        <Card theme={{
+            ...DefaultTheme,
+            roundness:5,
+            colors:{
+                ...DefaultTheme.colors,
+                surface:'#EE00EEFF',
+                text:'#FFF000'
+                },
+            }}>
             <Card.Content>
-                {console.log({item})}
-                <Title>{item.title}</Title>
-                <Paragraph>{item.content}</Paragraph>
+                <Title style={{fontFamily:'monospace',fontSize:16,fontWeight:"bold",}}>{item.title}</Title>
+                <Paragraph style={{fontSize:12}}>{item.content}</Paragraph>
             </Card.Content>
             <Card.Actions>
                 <RenderLinks links={item.links}/>
@@ -21,5 +28,23 @@ export default function GuidelineComponent ({item}) {
 
 function RenderLinks(props) {
     console.log(props.links)
-    return (<FlatList data={props.links} renderItem={({item})=> {console.log('The item link is:'+JSON.stringify(item));return <Button color={Colors.blue} onPress={()=>{Linking.openURL(item.link)}} title={item.title} />}}></FlatList>);
+    return (
+    <FlatList 
+    inverted={false}
+    data={props.links} 
+    collapsable={false}
+    renderItem={({item})=>{
+        return (
+        <Button 
+        mode="contained"
+        color="#0000EEFF"
+        style={{margin:8}}
+        contentStyle={{flex:1,justifyContent:'flex-start',flexWrap:'wrap',}} 
+        onPress={()=>{Linking.openURL(item.link)}}>
+            <Text style={{overflow:'visible',lineHeight:20,fontSize:12,}}>{item.title}</Text>
+        </Button>)
+    }}
+    keyExtractor={item=>item.link}
+    >
+    </FlatList>);
 }

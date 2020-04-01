@@ -150,6 +150,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('dascientist.keystore')
+            storePassword 'daScientist53'
+            keyAlias 'dascientist'
+            keyPassword 'daScientist53'
+        }
     }
     buildTypes {
         debug {

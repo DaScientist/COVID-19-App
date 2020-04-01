@@ -20,7 +20,7 @@ import {
 
 // import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeComponent from './Components/WHOGuidelines/HomeComponent.js';
+import WHOGuidelinesComponent from './Components/WHOGuidelines/WHOGuidelinesComponent.js';
 import SecondComponent from './Components/SecondComponent.js';
 
 const Drawer = createDrawerNavigator();
@@ -29,8 +29,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeComponent} />
-        <Drawer.Screen name="Second" component={SecondComponent} />
+        <Drawer.Screen name="Infection Prevention and control/WASH" component={WHOGuidelinesComponent} initialParams={{data:'wash'}}/>
+        <Drawer.Screen name="Guidance for schools, workplaces and institutions" component={WHOGuidelinesComponent} initialParams={{data:'institute'}} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
