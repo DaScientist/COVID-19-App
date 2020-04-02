@@ -31,6 +31,7 @@ const App = () => {
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Infection Prevention and control/WASH" component={WHOGuidelinesComponent} initialParams={{data:'wash'}}/>
         <Drawer.Screen name="Guidance for schools, workplaces and institutions" component={WHOGuidelinesComponent} initialParams={{data:'institute'}} />
+        <Drawer.Screen name="Points of entry and mass gatherings" component={WHOGuidelinesComponent} initialParams={{data:'mass'}} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

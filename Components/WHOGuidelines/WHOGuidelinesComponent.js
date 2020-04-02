@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {View, Text, FlatList} from 'react-native'
-import {Appbar, ActivityIndicator, Colors} from 'react-native-paper'
+import {Appbar, ActivityIndicator, Colors, Title} from 'react-native-paper'
 import Header from '../Header'
 import links from '../../Data/links.json'
 import GuidelineComponent from './GuidelineComponent'
@@ -13,24 +13,13 @@ export default function WHOGuidelinesComponent ({route,navigation}) {
     return obj.title === route.params?.data;
   })[0]
   // console.log('trylink: '+JSON.stringify(trylink));
-  // if(route.params?.data === 'wash')
-  // {
-  //   datalink = links['links'][0];
-  // }
-  // else if(route.params?.data === 'institute')
-  // {
-  //   datalink = links['links'][1];
-  // }
-  // else {
-  //   datalink = links['links'][0];
-  // }
   datalink=trylink;
   // console.log(datalink)
   useEffect(() => {
     fetch(datalink['link'])
       .then(response => response.json())
       .then(json => {
-        console.log(json)
+        // console.log(json)
         setGuidelines(json);
         setLoading(false);
       }).catch(error => {
@@ -42,12 +31,13 @@ export default function WHOGuidelinesComponent ({route,navigation}) {
     return <ActivityIndicator animating={true} color={Colors.blueGrey800} />
   } else {
     return (
-      <View style={{flex: 1}}>
-        <Header style={{flex: 1}} headerTitle='WHO Guidlines' />
-        <View style={{flex: 9}} nativeID='Container'>
+      <>
+        <Header headerTitle='WHO Guidlines' />
+        <View nativeID='Container'>
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
-            {console.log(guidelines)}
-            <FlatList 
+            {/* {console.log(guidelines)} */}
+            <Title style={{fontSize:16}}>{guidelines.title}</Title>
+            <FlatList
             data={guidelines.guidelines} 
             renderItem={GuidelineComponent} 
             collapsable={false}
@@ -55,7 +45,7 @@ export default function WHOGuidelinesComponent ({route,navigation}) {
             />
           </View>
         </View>
-      </View>
+      </>
     )
   }
 }

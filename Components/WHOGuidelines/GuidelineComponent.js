@@ -1,22 +1,14 @@
 import React from 'react'
-import {View, Text, Linking, StyleSheet} from 'react-native'
+import {View, Text, Linking, StyleSheet, FlatList} from 'react-native'
 import { DefaultTheme,Button,Card,Title,Paragraph,Colors } from "react-native-paper";
-import { FlatList } from 'react-native-gesture-handler';
+
 
 export default function GuidelineComponent ({item,theme}) {
-    console.log('Rendering a component')
+    // console.log('Rendering a component')
     return (
-        <Card theme={{
-            ...DefaultTheme,
-            roundness:5,
-            colors:{
-                ...DefaultTheme.colors,
-                surface:'#EE00EEFF',
-                text:'#FFF000'
-                },
-            }}>
+        <Card>
             <Card.Content>
-                <Title style={{fontFamily:'monospace',fontSize:16,fontWeight:"bold",}}>{item.title}</Title>
+                <Title style={{fontFamily:'monospace',fontSize:16,fontWeight:"bold",lineHeight:18}}>{item.title}</Title>
                 <Paragraph style={{fontSize:12}}>{item.content}</Paragraph>
             </Card.Content>
             <Card.Actions>
@@ -27,7 +19,7 @@ export default function GuidelineComponent ({item,theme}) {
 }
 
 function RenderLinks(props) {
-    console.log(props.links)
+    // console.log(props.links)
     return (
     <FlatList 
     inverted={false}

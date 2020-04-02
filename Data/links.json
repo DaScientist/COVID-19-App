@@ -7,6 +7,10 @@
         {
             "title":"institute",
             "link":"https://dascientist.github.io/COVID-19-App-Data/WHO_guidelines/institution_guidelines.json"
+        },
+        {
+            "title":"mass",
+            "link":"https://dascientist.github.io/COVID-19-App-Data/WHO_guidelines/mass_gathering_guidelines.json"
         }
     ]
 }
