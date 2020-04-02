@@ -1,5 +1,5 @@
 {
-  "name": "TodoListApp",
+  "name": "Covid19InfoApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "react-native-gesture-handler": "^1.6.1",
     "react-native-paper": "^3.6.0",
     "react-native-reanimated": "^1.7.1",
+    "react-native-rename": "^2.4.1",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
     "react-native-vector-icons": "^6.6.0"

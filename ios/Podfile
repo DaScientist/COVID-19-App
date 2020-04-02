@@ -21,8 +21,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'TodoListApp' do
-  # Pods for TodoListApp
+target 'Covid19InfoApp' do
+  # Pods for Covid19InfoApp
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -54,7 +54,7 @@ target 'TodoListApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'TodoListAppTests' do
+  target 'Covid19InfoAppTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -71,10 +71,10 @@ target 'TodoListApp' do
   end
 end
 
-target 'TodoListApp-tvOS' do
-  # Pods for TodoListApp-tvOS
+target 'Covid19InfoApp-tvOS' do
+  # Pods for Covid19InfoApp-tvOS
 
-  target 'TodoListApp-tvOSTests' do
+  target 'Covid19InfoApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
