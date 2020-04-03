@@ -6,10 +6,10 @@ import { DefaultTheme,Button,Card,Title,Paragraph,Colors } from "react-native-pa
 export default function GuidelineComponent ({item,theme}) {
     // console.log('Rendering a component')
     return (
-        <Card>
+        <Card style={{margin:8}}>
             <Card.Content>
-                <Title style={{fontFamily:'monospace',fontSize:16,fontWeight:"bold",lineHeight:18}}>{item.title}</Title>
-                <Paragraph style={{fontSize:12}}>{item.content}</Paragraph>
+                <Title style={{fontFamily:'monospace',fontSize:16,textAlign:'left',fontWeight:"bold",lineHeight:18,textTransform:'uppercase',justifyContent:'center'}}>{item.title}</Title>
+                <Paragraph style={{fontSize:12,justifyContent:'center',textAlign:'left'}}>{item.content}</Paragraph>
             </Card.Content>
             <Card.Actions>
                 <RenderLinks links={item.links}/>

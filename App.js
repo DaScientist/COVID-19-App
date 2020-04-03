@@ -18,15 +18,18 @@ import {
   StatusBar,
 } from 'react-native'
 
-import { Colors } from "react-native/Libraries/NewAppScreen";
+// import { Colors } from "react-native/Libraries/NewAppScreen";
 
 // import { createStackNavigator } from "@react-navigation/stack";
 import {
   createDrawerNavigator,
   DrawerItem,
   DrawerItemList,
-  DrawerContent
+  DrawerContent,
+  DrawerContentScrollView
 } from '@react-navigation/drawer'
+import { Colors } from "react-native-paper";
+
 import WHOGuidelinesComponent from './Components/WHOGuidelines/WHOGuidelinesComponent.js'
 import SecondComponent from './Components/SecondComponent.js'
 
@@ -36,7 +39,6 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName='Home'>
-        
         <Drawer.Screen
           name='Infection Prevention and control/WASH'
           component={WHOGuidelinesComponent}
@@ -51,7 +53,6 @@ const App = () => {
           name='Points of entry and mass gatherings'
           component={WHOGuidelinesComponent}
           initialParams={{data: 'mass'}} />
-      
       </Drawer.Navigator>
     </NavigationContainer>
   )

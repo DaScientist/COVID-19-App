@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {View, Text, FlatList} from 'react-native'
+import {View, Text, FlatList, SafeAreaView,ScrollView} from 'react-native'
 import {Appbar, ActivityIndicator, Colors, Title} from 'react-native-paper'
 import Header from '../Header'
 import links from '../../Data/links.json'
@@ -32,26 +32,37 @@ export default function WHOGuidelinesComponent ({route, navigation}) {
     return (
       <>
         <Header headerTitle='WHO Guidlines' navigation={navigation} />
+        <SafeAreaView>
         <View style={{alignContent:'center',alignItems: 'center', justifyContent: 'center'}}>
          <ActivityIndicator animating={true} color={Colors.amber900} />
         </View>
+        </SafeAreaView>
       </>
     )
   } else {
     return (
       <>
-        <Header headerTitle='WHO Guidlines' navigation={ navigation } />
+        <Header headerTitle='WHO Guidelines' navigation={ navigation } />
         <View nativeID='Container'>
-          <View style={{alignItems: 'center', justifyContent: 'center'}}>
+          <ScrollView>
             {/* {console.log(guidelines)} */}
-            <Title style={{fontSize: 16}}>{guidelines.title}</Title>
+            <Title style={{
+              marginLeft:8, 
+              fontSize: 16,
+              fontWeight:'bold',
+              justifyContent:'flex-start',
+              fontFamily:'serif',
+              lineHeight:22,
+              marginTop:12
+              }}>{guidelines.title}</Title>
             <FlatList
+            style={{marginBottom:100}}
               data={guidelines.guidelines}
               renderItem={GuidelineComponent}
               collapsable={false}
               keyExtractor={item => item.title}
             />
-          </View>
+          </ScrollView>
         </View>
       </>
     )

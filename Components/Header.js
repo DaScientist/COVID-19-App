@@ -36,6 +36,7 @@ export default function Header (props) {
           color: 'white',
           alignContent: 'center',
           fontFamily: 'monospace',
+          fontSize:16
         }}>
         {props.headerTitle}
       </Text>
