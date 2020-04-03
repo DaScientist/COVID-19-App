@@ -21,7 +21,12 @@ import {
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
 // import { createStackNavigator } from "@react-navigation/stack";
-import {createDrawerNavigator} from '@react-navigation/drawer'
+import {
+  createDrawerNavigator,
+  DrawerItem,
+  DrawerItemList,
+  DrawerContent
+} from '@react-navigation/drawer'
 import WHOGuidelinesComponent from './Components/WHOGuidelines/WHOGuidelinesComponent.js'
 import SecondComponent from './Components/SecondComponent.js'
 
