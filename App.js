@@ -179,7 +179,7 @@ const slides = [
     text:
       'Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick.',
     titleStyle: styles.title,
-    image: require('./assets/iconfinder_Coronavirus_dont_touch_eyes_and_nose_21_5740512.png'),
+    image: require('./assets/iconfinder_Coronavirus_dont_touch_eyes_and_nose_21_5740512.jpg'),
     imageStyle: {width: 200, height: 200},
     backgroundColor: '#3395ff',
   },
