@@ -47,13 +47,14 @@ export default function WHOGuidelinesComponent ({route, navigation}) {
           <ScrollView>
             {/* {console.log(guidelines)} */}
             <Title style={{
-              marginLeft:8, 
-              fontSize: 16,
+              margin:8, 
+              fontSize: 14,
               fontWeight:'bold',
               justifyContent:'flex-start',
               fontFamily:'serif',
               lineHeight:22,
-              marginTop:12
+              marginTop:12,
+              textAlign:'center'
               }}>{guidelines.title}</Title>
             <FlatList
             style={{marginBottom:100}}

@@ -8,7 +8,7 @@ export default function GuidelineComponent ({item,theme}) {
     return (
         <Card style={{margin:8}}>
             <Card.Content>
-                <Title style={{fontFamily:'monospace',fontSize:16,textAlign:'left',fontWeight:"bold",lineHeight:18,textTransform:'uppercase',justifyContent:'center'}}>{item.title}</Title>
+                <Title style={{fontFamily:'monospace',fontSize:16,textAlign:'justify',fontWeight:"bold",lineHeight:18,textTransform:'uppercase',justifyContent:'center'}}>{item.title}</Title>
                 <Paragraph style={{fontSize:12,justifyContent:'center',textAlign:'left'}}>{item.content}</Paragraph>
             </Card.Content>
             <Card.Actions>
