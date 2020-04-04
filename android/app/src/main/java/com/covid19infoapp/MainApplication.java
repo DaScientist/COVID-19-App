@@ -1,4 +1,10 @@
-package com.covid19infoapp;
+/**
+ * This app belongs to Mustanseer Juzer Sakerwala
+ * aka Da Scientist
+ * https://github.com/dascientist/COVID-19-App
+ */
+
+ package com.covid19infoapp;
 
 import android.app.Application;
 import android.content.Context;

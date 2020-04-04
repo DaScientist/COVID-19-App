@@ -1,6 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * This app belongs to Mustanseer Juzer Sakerwala
+ * aka Da Scientist
+ * https://github.com/dascientist/COVID-19-App
  *
  * @format
  * @flow strict-local
